@@ -1,0 +1,30 @@
+<h1>Article creation</h1>
+
+<!-- FIRST: WITHOUT PARTIAL -->
+<%= form_for @article do |f| %>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">
+  <%= f.label :title %>
+    </span>
+  <%= f.text_field :title %>
+  </div>
+</div>
+
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">
+  <%= f.label :content, 'content' %>
+      
+    </span>
+  </div>
+  <!-- <textarea class="form-control" aria-label="With textarea"> -->
+  <%= f.text_area :content, class: "form-control" %>
+<!-- </textarea> -->
+</div>
+  
+<br>
+  <%= f.submit %>
+<% end %>
+<br>
+<%= link_to "Home", articles_path %>

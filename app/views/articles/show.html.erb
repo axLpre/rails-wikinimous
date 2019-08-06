@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <h1>Article title: <%= @article.title %> <small>
+      
+     <%= link_to 'Delete',  article_path(@article), method: :delete, data: { confirm: 'are you sure?' } %>
+    </small>
+   </h1>
+    <div>
+      <p><%= @article.content %></p>
+    </div>
+  </div>
+</div>
+
+<%= link_to "Home", articles_path %>
